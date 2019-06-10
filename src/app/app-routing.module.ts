@@ -19,7 +19,8 @@ const routes: Routes = [
   {
     path: 'app2',
     loadChildren: () => import('../../projects/app2/src/app/app.module').then(mod => mod.App2SharedModule)
-  }
+  },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
